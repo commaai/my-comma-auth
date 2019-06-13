@@ -1,0 +1,18 @@
+{
+  "name": "@commaai/my-comma-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "comma-api": "https://github.com/commaai/comma-api.git#full-spec",
+    "config-request": "^0.5.1",
+    "global": "^4.4.0",
+    "localforage": "^1.7.3",
+    "querystringify": "^2.1.1"
+  }
+}
