@@ -18,9 +18,3 @@ export function logOut() {
 export function isAuthenticated() {
   return storage.isAuthed;
 }
-
-// async function delay (ms) {
-//   return new Promise(function (resolve, reject) {
-//     setTimeout(resolve, ms);
-//   });
-// }
