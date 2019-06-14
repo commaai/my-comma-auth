@@ -1,3 +1,4 @@
+import document from 'global/document';
 import qs from 'querystringify';
 
 export const GOOGLE_AUTH_ENDPOINT = 'https://accounts.google.com/o/oauth2/auth';
