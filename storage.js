@@ -1,7 +1,5 @@
 import storage from 'localforage';
 
-export { oauthRedirectLink } from './google';
-
 export let isAuthed = false;
 let useForage = true;
 
