@@ -3,16 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.isAuthed = exports.oauthRedirectLink = undefined;
-
-var _google = require('./google');
-
-Object.defineProperty(exports, 'oauthRedirectLink', {
-  enumerable: true,
-  get: function () {
-    return _google.oauthRedirectLink;
-  }
-});
+exports.isAuthed = undefined;
 exports.logOut = logOut;
 exports.getTokenInternal = getTokenInternal;
 exports.getCommaAccessToken = getCommaAccessToken;

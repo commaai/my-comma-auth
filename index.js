@@ -3,11 +3,8 @@ import document from 'global/document';
 import * as storage from './storage';
 import * as google from './google';
 import * as config from './config';
-export { oauthRedirectLink } from './config';
 
-module.exports = { storage, google, config };
-
-export default { init, logOut, isAuthenticated };
+export { storage, google, config };
 
 // seed cache
 async function init() {
@@ -24,4 +21,4 @@ function isAuthenticated() {
   return storage.isAuthed;
 }
 
-
+export default { init, logOut, isAuthenticated };
