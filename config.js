@@ -9,7 +9,7 @@ var redirectOrigin = 'http://127.0.0.1';
 if (document.location) {
   redirectOrigin = document.location.origin;
 }
-export const REDIRECT_URI = {redirectOrigin}/auth/g/redirect
+export const REDIRECT_URI = redirectOrigin + '/auth/g/redirect';
 
 export const OAUTH_PARAMS = {
   type: 'web_server',
