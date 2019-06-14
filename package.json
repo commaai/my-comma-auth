@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "browser": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel --out-dir dist *.js"
   },
   "author": "",
   "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
   "dependencies": {
     "comma-api": "https://github.com/commaai/comma-api.git#full-spec",
     "config-request": "^0.5.1",
