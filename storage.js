@@ -19,6 +19,11 @@ export function getTokenInternal () {
   return null;
 }
 
+export async function setCommaAccessToken (token) {
+  localStorage.setItem('authorization', token);
+  return getCommaAccessToken();
+}
+
 export async function getCommaAccessToken () {
   let token = getTokenInternal();
   if (!token) {
