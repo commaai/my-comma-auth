@@ -18,3 +18,6 @@ export function logOut() {
 export function isAuthenticated() {
   return storage.isAuthed;
 }
+
+export default { init, logOut, isAuthenticated };
+
