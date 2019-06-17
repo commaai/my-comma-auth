@@ -1,10 +1,9 @@
 import document from 'global/document';
 
 import * as storage from './storage';
-import * as google from './google';
 import * as config from './config';
 
-export { storage, google, config };
+export { storage, config };
 
 // seed cache
 async function init() {

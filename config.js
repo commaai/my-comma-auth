@@ -2,8 +2,7 @@ import document from 'global/document';
 import qs from 'querystringify';
 
 export const GOOGLE_AUTH_ENDPOINT = 'https://accounts.google.com/o/oauth2/auth';
-export const GOOGLE_CLIENT_ID = '45471411055-ffgv404iin6vi94qv6g6hd8fb48hr4bf.apps.googleusercontent.com';
-export const GOOGLE_CLIENT_SECRET = '_9OMwDPbbx2JktznntXt-1Hs';
+export const GOOGLE_CLIENT_ID = '45471411055-ornt4svd2miog6dnopve7qtmh5mnu6id.apps.googleusercontent.com';
 export const GOOGLE_URL_ROOT = 'https://www.googleapis.com/';
 
 var redirectOrigin = 'http://127.0.0.1';
