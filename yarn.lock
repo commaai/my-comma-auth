@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@commaai/comma-api@^1.0.0":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@commaai/comma-api/-/comma-api-1.0.12.tgz#aa2be678dd0cdcf5102602e011051eda354853d6"
+  integrity sha512-AWwKaQzgQt6oyOP0lvMqy5/7rMQbKIVwTYX5MJnBFOVOgHrGmzxhPk8Bsi+5GpSA1qSFbnzoMvQ95QFC5teJhw==
+  dependencies:
+    babel-runtime "^6.26.0"
+    config-request "^0.5.1"
+    joi-browser "^13.4.0"
+    querystringify "^2.1.1"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -877,13 +887,6 @@ collection-visit@^1.0.0:
     map-visit "^1.0.0"
     object-visit "^1.0.0"
 
-"comma-api@https://github.com/commaai/comma-api.git#full-spec":
-  version "1.0.0"
-  resolved "https://github.com/commaai/comma-api.git#72b46cec1b9ee4acf464f9cca2cf90dbd18430b3"
-  dependencies:
-    config-request "^0.5.1"
-    querystringify "^2.1.1"
-
 commander@^2.11.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
@@ -1624,6 +1627,11 @@ isobject@~2.0.0:
   integrity sha1-II3ocr1zeMKpKvlCij9W65GhIsQ=
   dependencies:
     isarray "0.0.1"
+
+joi-browser@^13.4.0:
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/joi-browser/-/joi-browser-13.4.0.tgz#b72ba61b610e3f58e51b563a14e0f5225cfb6896"
+  integrity sha512-TfzJd2JaJ/lg/gU+q5j9rLAjnfUNF9DUmXTP9w+GfmG79LjFOXFeM7hIFuXCBcZCivUDFwd9l1btTV9rhHumtQ==
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
