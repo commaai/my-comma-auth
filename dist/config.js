@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.oauthRedirectLink = exports.OAUTH_PARAMS = exports.REDIRECT_URI = exports.GOOGLE_URL_ROOT = exports.GOOGLE_CLIENT_SECRET = exports.GOOGLE_CLIENT_ID = exports.GOOGLE_AUTH_ENDPOINT = undefined;
+exports.oauthRedirectLink = exports.OAUTH_PARAMS = exports.REDIRECT_URI = exports.GOOGLE_URL_ROOT = exports.GOOGLE_CLIENT_ID = exports.GOOGLE_AUTH_ENDPOINT = undefined;
 
 var _document = require('global/document');
 
@@ -16,8 +16,7 @@ var _querystringify2 = _interopRequireDefault(_querystringify);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GOOGLE_AUTH_ENDPOINT = exports.GOOGLE_AUTH_ENDPOINT = 'https://accounts.google.com/o/oauth2/auth';
-var GOOGLE_CLIENT_ID = exports.GOOGLE_CLIENT_ID = '45471411055-ffgv404iin6vi94qv6g6hd8fb48hr4bf.apps.googleusercontent.com';
-var GOOGLE_CLIENT_SECRET = exports.GOOGLE_CLIENT_SECRET = '_9OMwDPbbx2JktznntXt-1Hs';
+var GOOGLE_CLIENT_ID = exports.GOOGLE_CLIENT_ID = '45471411055-ornt4svd2miog6dnopve7qtmh5mnu6id.apps.googleusercontent.com';
 var GOOGLE_URL_ROOT = exports.GOOGLE_URL_ROOT = 'https://www.googleapis.com/';
 
 var redirectOrigin = 'http://127.0.0.1';

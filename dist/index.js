@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.config = exports.google = exports.storage = undefined;
+exports.config = exports.storage = undefined;
 
 var _regenerator = require('babel-runtime/regenerator');
 
@@ -49,10 +49,6 @@ var _storage = require('./storage');
 
 var storage = _interopRequireWildcard(_storage);
 
-var _google = require('./google');
-
-var google = _interopRequireWildcard(_google);
-
 var _config = require('./config');
 
 var config = _interopRequireWildcard(_config);
@@ -62,7 +58,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.storage = storage;
-exports.google = google;
 exports.config = config;
 
 
