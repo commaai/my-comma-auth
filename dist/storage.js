@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getCommaAccessToken = exports.setCommaAccessToken = exports.isAuthed = undefined;
+exports.getCommaAccessToken = exports.logOut = exports.isAuthed = undefined;
 
 var _regenerator = require('babel-runtime/regenerator');
 
@@ -13,16 +13,23 @@ var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-var setCommaAccessToken = exports.setCommaAccessToken = function () {
-  var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(token) {
+var logOut = exports.logOut = function () {
+  var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
     return _regenerator2.default.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            localStorage.setItem('authorization', token);
-            return _context.abrupt('return', getCommaAccessToken());
+            localStorage.removeItem('authorization');
 
-          case 2:
+            if (!useForage) {
+              _context.next = 4;
+              break;
+            }
+
+            _context.next = 4;
+            return _localforage2.default.removeItem('authorization');
+
+          case 4:
           case 'end':
             return _context.stop();
         }
@@ -30,7 +37,7 @@ var setCommaAccessToken = exports.setCommaAccessToken = function () {
     }, _callee, this);
   }));
 
-  return function setCommaAccessToken(_x) {
+  return function logOut() {
     return _ref.apply(this, arguments);
   };
 }();
@@ -96,8 +103,8 @@ var getCommaAccessToken = exports.getCommaAccessToken = function () {
   };
 }();
 
-exports.logOut = logOut;
 exports.getTokenInternal = getTokenInternal;
+exports.setCommaAccessToken = setCommaAccessToken;
 
 var _localforage = require('localforage');
 
@@ -108,13 +115,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var isAuthed = exports.isAuthed = false;
 var useForage = true;
 
-function logOut() {
-  localStorage.removeItem('authorization');
-  if (useForage) {
-    _localforage2.default.removeItem('authorization');
-  }
-}
-
 function getTokenInternal() {
   if (typeof localStorage !== 'undefined') {
     if (localStorage.authorization) {
@@ -122,4 +122,9 @@ function getTokenInternal() {
     }
   }
   return null;
+}
+
+function setCommaAccessToken(token) {
+  localStorage.setItem('authorization', token);
+  return getCommaAccessToken();
 }

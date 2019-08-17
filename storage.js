@@ -3,10 +3,10 @@ import storage from 'localforage';
 export let isAuthed = false;
 let useForage = true;
 
-export function logOut () {
+export async function logOut () {
   localStorage.removeItem('authorization');
   if (useForage) {
-    storage.removeItem('authorization');
+    await storage.removeItem('authorization');
   }
 }
 
@@ -19,7 +19,7 @@ export function getTokenInternal () {
   return null;
 }
 
-export async function setCommaAccessToken (token) {
+export function setCommaAccessToken (token) {
   localStorage.setItem('authorization', token);
   return getCommaAccessToken();
 }

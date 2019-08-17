@@ -11,8 +11,8 @@ async function init() {
   return token;
 }
 
-function logOut() {
-  storage.logOut();
+async function logOut() {
+  await storage.logOut();
   document.location.href = document.location.origin;
 }
 
