@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@commaai/comma-api@^1.0.0":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@commaai/comma-api/-/comma-api-1.0.12.tgz#aa2be678dd0cdcf5102602e011051eda354853d6"
-  integrity sha512-AWwKaQzgQt6oyOP0lvMqy5/7rMQbKIVwTYX5MJnBFOVOgHrGmzxhPk8Bsi+5GpSA1qSFbnzoMvQ95QFC5teJhw==
+"@commaai/comma-api@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@commaai/comma-api/-/comma-api-1.2.2.tgz#66d9a4da69477aa74e8f2d7aae638589d21cfb99"
+  integrity sha512-A4uGyK1lilMoYbn/s6meZqmBx1g/kYhPrlYgwqk7tpLAJ82AXtWtWiYHMUgvX7dHueywrjgnlXS9hfMbVXpeWA==
   dependencies:
     babel-runtime "^6.26.0"
     config-request "^0.5.1"
