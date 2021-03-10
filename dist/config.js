@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.APPLE_REDIRECT_LINK = exports.APPLE_OAUTH_PARAMS = exports.APPLE_REDIRECT_URI = exports.APPLE_REDIRECT_PATH = exports.APPLE_CLIENT_ID = exports.APPLE_AUTH_ENDPOINT = exports.GOOGLE_REDIRECT_LINK = exports.GOOGLE_OAUTH_PARAMS = exports.GOOGLE_REDIRECT_URI = exports.GOOGLE_REDIRECT_PATH = exports.GOOGLE_URL_ROOT = exports.GOOGLE_AUTH_ENDPOINT = exports.GOOGLE_CLIENT_ID = undefined;
+exports.GITHUB_REDIRECT_LINK = exports.GITHUB_OAUTH_PARAMS = exports.GITHUB_REDIRECT_URI = exports.GITHUB_REDIRECT_PATH = exports.GITHUB_AUTH_ENDPOINT = exports.GITHUB_CLIENT_ID = exports.APPLE_REDIRECT_LINK = exports.APPLE_OAUTH_PARAMS = exports.APPLE_REDIRECT_URI = exports.APPLE_REDIRECT_PATH = exports.APPLE_CLIENT_ID = exports.APPLE_AUTH_ENDPOINT = exports.GOOGLE_REDIRECT_LINK = exports.GOOGLE_OAUTH_PARAMS = exports.GOOGLE_REDIRECT_URI = exports.GOOGLE_REDIRECT_PATH = exports.GOOGLE_URL_ROOT = exports.GOOGLE_AUTH_ENDPOINT = exports.GOOGLE_CLIENT_ID = undefined;
 
 var _document = require('global/document');
 
@@ -46,3 +46,13 @@ var APPLE_OAUTH_PARAMS = exports.APPLE_OAUTH_PARAMS = {
   responseMode: 'query'
 };
 var APPLE_REDIRECT_LINK = exports.APPLE_REDIRECT_LINK = [APPLE_AUTH_ENDPOINT, _querystringify2.default.stringify(APPLE_OAUTH_PARAMS)].join('?');
+
+var GITHUB_CLIENT_ID = exports.GITHUB_CLIENT_ID = '2ca8e276e644c46c00fa';
+var GITHUB_AUTH_ENDPOINT = exports.GITHUB_AUTH_ENDPOINT = 'https://github.com/login/oauth/authorize';
+var GITHUB_REDIRECT_PATH = exports.GITHUB_REDIRECT_PATH = '/auth/h/redirect';
+var GITHUB_REDIRECT_URI = exports.GITHUB_REDIRECT_URI = redirectOrigin + GITHUB_REDIRECT_PATH;
+var GITHUB_OAUTH_PARAMS = exports.GITHUB_OAUTH_PARAMS = {
+  client_id: GITHUB_CLIENT_ID,
+  redirect_uri: GITHUB_REDIRECT_URI
+};
+var GITHUB_REDIRECT_LINK = exports.GITHUB_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, _querystringify2.default.stringify(GITHUB_OAUTH_PARAMS)].join('?');
