@@ -23,22 +23,30 @@ export const GOOGLE_REDIRECT_LINK = [GOOGLE_AUTH_ENDPOINT, qs.stringify(GOOGLE_O
 
 export const APPLE_AUTH_ENDPOINT = 'https://appleid.apple.com/auth/authorize';
 export const APPLE_CLIENT_ID = 'ai.comma.login';
+export const APPLE_SCOPES = 'name email';
 export const APPLE_REDIRECT_PATH = '/auth/a/redirect';
-export const APPLE_REDIRECT_URI = 'https://my.comma.ai' + APPLE_REDIRECT_PATH;
+export const APPLE_REDIRECT_URI = redirectOrigin + APPLE_REDIRECT_PATH;
 export const APPLE_OAUTH_PARAMS = {
   client_id : APPLE_CLIENT_ID,
   redirect_uri: APPLE_REDIRECT_URI,
   response_type: 'code',
-  responseMode: 'query',
+  response_mode: 'form_post',
+  scope: APPLE_SCOPES,
 };
 export const APPLE_REDIRECT_LINK = [APPLE_AUTH_ENDPOINT, qs.stringify(APPLE_OAUTH_PARAMS)].join('?')
 
 export const GITHUB_CLIENT_ID = '2ca8e276e644c46c00fa';
+export const GITHUB_JWT_CLIENT_ID = 'ab2554c75d1f582864bb'
 export const GITHUB_AUTH_ENDPOINT = 'https://github.com/login/oauth/authorize';
 export const GITHUB_REDIRECT_PATH = '/auth/h/redirect';
 export const GITHUB_REDIRECT_URI = redirectOrigin + GITHUB_REDIRECT_PATH;
-export const GITHUB_OAUTH_PARAMS = {
+export const GITHUB_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, qs.stringify({
   client_id: GITHUB_CLIENT_ID,
   redirect_uri: GITHUB_REDIRECT_URI,
-};
-export const GITHUB_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, qs.stringify(GITHUB_OAUTH_PARAMS)].join('?')
+  scope: 'read:user',
+})].join('?');
+export const GITHUB_JWT_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, qs.stringify({
+  client_id: GITHUB_JWT_CLIENT_ID,
+  redirect_uri: GITHUB_REDIRECT_URI,
+  scope: 'read:user',
+})].join('?');
