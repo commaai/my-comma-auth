@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.GITHUB_JWT_REDIRECT_LINK = exports.GITHUB_REDIRECT_LINK = exports.GITHUB_REDIRECT_URI = exports.GITHUB_REDIRECT_PATH = exports.GITHUB_AUTH_ENDPOINT = exports.GITHUB_JWT_CLIENT_ID = exports.GITHUB_CLIENT_ID = exports.APPLE_REDIRECT_LINK = exports.APPLE_OAUTH_PARAMS = exports.APPLE_REDIRECT_URI = exports.APPLE_REDIRECT_PATH = exports.APPLE_SCOPES = exports.APPLE_CLIENT_ID = exports.APPLE_AUTH_ENDPOINT = exports.GOOGLE_REDIRECT_LINK = exports.GOOGLE_OAUTH_PARAMS = exports.GOOGLE_REDIRECT_URI = exports.GOOGLE_REDIRECT_PATH = exports.GOOGLE_URL_ROOT = exports.GOOGLE_AUTH_ENDPOINT = exports.GOOGLE_CLIENT_ID = undefined;
+exports.GITHUB_CONNECT_REDIRECT_LINK = exports.GITHUB_JWT_REDIRECT_LINK = exports.GITHUB_REDIRECT_LINK = exports.GITHUB_REDIRECT_URI = exports.GITHUB_REDIRECT_PATH = exports.GITHUB_AUTH_ENDPOINT = exports.GITHUB_CONNECT_CLIENT_ID = exports.GITHUB_JWT_CLIENT_ID = exports.GITHUB_CLIENT_ID = exports.APPLE_REDIRECT_LINK = exports.APPLE_OAUTH_PARAMS = exports.APPLE_REDIRECT_URI = exports.APPLE_REDIRECT_PATH = exports.APPLE_SCOPES = exports.APPLE_CLIENT_ID = exports.APPLE_AUTH_ENDPOINT = exports.GOOGLE_REDIRECT_LINK = exports.GOOGLE_OAUTH_PARAMS = exports.GOOGLE_REDIRECT_URI = exports.GOOGLE_REDIRECT_PATH = exports.GOOGLE_URL_ROOT = exports.GOOGLE_AUTH_ENDPOINT = exports.GOOGLE_CLIENT_ID = undefined;
 
 var _document = require('global/document');
 
@@ -51,6 +51,7 @@ var APPLE_REDIRECT_LINK = exports.APPLE_REDIRECT_LINK = [APPLE_AUTH_ENDPOINT, _q
 
 var GITHUB_CLIENT_ID = exports.GITHUB_CLIENT_ID = '2ca8e276e644c46c00fa';
 var GITHUB_JWT_CLIENT_ID = exports.GITHUB_JWT_CLIENT_ID = 'ab2554c75d1f582864bb';
+var GITHUB_CONNECT_CLIENT_ID = exports.GITHUB_CONNECT_CLIENT_ID = '9df7d201e5d1a3378382';
 var GITHUB_AUTH_ENDPOINT = exports.GITHUB_AUTH_ENDPOINT = 'https://github.com/login/oauth/authorize';
 var GITHUB_REDIRECT_PATH = exports.GITHUB_REDIRECT_PATH = '/auth/h/redirect';
 var GITHUB_REDIRECT_URI = exports.GITHUB_REDIRECT_URI = redirectOrigin + GITHUB_REDIRECT_PATH;
@@ -61,6 +62,11 @@ var GITHUB_REDIRECT_LINK = exports.GITHUB_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT,
 })].join('?');
 var GITHUB_JWT_REDIRECT_LINK = exports.GITHUB_JWT_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, _querystringify2.default.stringify({
   client_id: GITHUB_JWT_CLIENT_ID,
+  redirect_uri: GITHUB_REDIRECT_URI,
+  scope: 'read:user'
+})].join('?');
+var GITHUB_CONNECT_REDIRECT_LINK = exports.GITHUB_CONNECT_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, _querystringify2.default.stringify({
+  client_id: GITHUB_CONNECT_CLIENT_ID,
   redirect_uri: GITHUB_REDIRECT_URI,
   scope: 'read:user'
 })].join('?');

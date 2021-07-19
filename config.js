@@ -37,6 +37,7 @@ export const APPLE_REDIRECT_LINK = [APPLE_AUTH_ENDPOINT, qs.stringify(APPLE_OAUT
 
 export const GITHUB_CLIENT_ID = '2ca8e276e644c46c00fa';
 export const GITHUB_JWT_CLIENT_ID = 'ab2554c75d1f582864bb'
+export const GITHUB_CONNECT_CLIENT_ID = '9df7d201e5d1a3378382'
 export const GITHUB_AUTH_ENDPOINT = 'https://github.com/login/oauth/authorize';
 export const GITHUB_REDIRECT_PATH = '/auth/h/redirect';
 export const GITHUB_REDIRECT_URI = redirectOrigin + GITHUB_REDIRECT_PATH;
@@ -47,6 +48,11 @@ export const GITHUB_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, qs.stringify({
 })].join('?');
 export const GITHUB_JWT_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, qs.stringify({
   client_id: GITHUB_JWT_CLIENT_ID,
+  redirect_uri: GITHUB_REDIRECT_URI,
+  scope: 'read:user',
+})].join('?');
+export const GITHUB_CONNECT_REDIRECT_LINK = [GITHUB_AUTH_ENDPOINT, qs.stringify({
+  client_id: GITHUB_CONNECT_CLIENT_ID,
   redirect_uri: GITHUB_REDIRECT_URI,
   scope: 'read:user',
 })].join('?');
