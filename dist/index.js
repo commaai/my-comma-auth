@@ -51,7 +51,10 @@ var logOut = function () {
             return storage.logOut();
 
           case 2:
-            _document2.default.location.href = _document2.default.location.origin;
+
+            if (typeof window !== 'undefined') {
+              window.location.href = window.location.origin;
+            }
 
           case 3:
           case 'end':
@@ -65,10 +68,6 @@ var logOut = function () {
     return _ref2.apply(this, arguments);
   };
 }();
-
-var _document = require('global/document');
-
-var _document2 = _interopRequireDefault(_document);
 
 var _storage = require('./storage');
 

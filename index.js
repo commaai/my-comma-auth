@@ -1,5 +1,3 @@
-import document from 'global/document';
-
 import * as storage from './storage';
 import * as config from './config';
 
@@ -13,7 +11,10 @@ async function init() {
 
 async function logOut() {
   await storage.logOut();
-  document.location.href = document.location.origin;
+
+  if (typeof window !== 'undefined') {
+    window.location.href = window.location.origin;
+  }
 }
 
 function isAuthenticated() {

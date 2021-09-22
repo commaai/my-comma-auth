@@ -12,8 +12,8 @@ var _querystringify2 = _interopRequireDefault(_querystringify);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var service = 'localhost:3000';
-if (document.location) {
-  service = document.location.host;
+if (typeof window !== 'undefined' && window.location) {
+  service = window.location.host;
 }
 
 var AUTH_PATH = exports.AUTH_PATH = '/auth/';

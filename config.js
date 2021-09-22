@@ -1,8 +1,8 @@
 import qs from 'querystringify';
 
 let service = 'localhost:3000';
-if (document.location) {
-  service = document.location.host;
+if (typeof window !== 'undefined' && window.location) {
+  service = window.location.host;
 }
 
 export const AUTH_PATH = '/auth/';
